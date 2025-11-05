@@ -5,6 +5,58 @@
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, sans-serif;
 }
 
+
+/* NAVBAR */
+.nav-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0px;
+  padding: 0px;
+}
+
+.logo {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  font-weight: bold;
+  padding: 0px;
+  padding-right: 10px;
+  margin: 0px;
+}
+
+.logo span {
+  color: #6b4ce6;
+}
+
+.links{
+  display: flex;
+  list-style: none;
+  gap: 6rem;
+  align-items: center;
+  margin: auto;
+  padding-right: 50px;
+}
+
+.links a{
+  text-decoration: none;
+  color: black;
+}
+
+.menu{
+  display: none;
+  width: 30px;
+  height: 30px;
+  margin: 0px;
+  padding: 0px;
+  padding-right: 40px;
+  cursor: pointer;
+}
+
+
+/* BODY */
 body {
   color: #0d0d0d;
   
@@ -16,51 +68,18 @@ body {
   padding: 20px 4%;
 }
 
-/* NAVBAR */
-.nav-container{ 
-  display:grid;
-  grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
-  align-items: center;
-  margin:20px 0 40px;
-  gap:100px;
-
-}
-.buts{
-  background: #6b4ce6;
-  padding: 10px 15px;
-  border-radius: 8px;
-  font-size: 14px;
-  cursor: pointer;
-  text-decoration: none;
-  margin-left: 10px;
-  border-color: #5837df;
-  color: white;
-}
-.logo {
-  font-size: 22px;
-  font-weight: bold;
-}
-
-.logo span {
-  color: #6b4ce6;
-}
-
-
-
-
-
-
-
 
 
 /* HERO */
 .hero {
+  margin-top: 15px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   
   gap: 32px;
 }
+
 .hero-text{
   background: linear-gradient(rgba(27,10,77,0.6), rgba(27,10,77,0.6)), 
                       url('assets/hero.png') center/cover no-repeat;
@@ -295,4 +314,14 @@ span {
   font-size: 24px;
   margin: 10px;
   
+}
+
+@media(max-width: 800px){
+  .links{
+    display: none;
+  }
+
+  .menu{
+    display: flex;
+  }
 }
